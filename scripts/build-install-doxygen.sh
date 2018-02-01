@@ -4,9 +4,9 @@ set -ex
 # Build instructions from: https://www.stack.nl/~dimitri/doxygen/download.html
 echo "Cloning doxygen repository..."
 cd ~/
-git clone https://github.com/doxygen/doxygen.git
+git clone https://github.com/doxygen/doxygen.git doxygen-src
 
-cd doxygen
+cd doxygen-src
 
 # Use v1.8.14 (2f4139de014bf03898320a45fe52c92872c1e0f4)
 git checkout 2f4139de014bf03898320a45fe52c92872c1e0f4 .
@@ -24,6 +24,6 @@ echo "Done building doxygen..."
 
 echo "Install Doxygen"
 cp ./bin/* $TRAVIS_BUILD_DIR
-make install
+#make install
 
 cd $TRAVIS_BUILD_DIR
