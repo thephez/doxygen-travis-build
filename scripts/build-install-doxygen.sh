@@ -3,7 +3,6 @@ set -ex
 
 # Build instructions from: https://www.stack.nl/~dimitri/doxygen/download.html
 echo "Cloning doxygen repository..."
-cd ~/
 git clone https://github.com/doxygen/doxygen.git doxygen-src
 
 cd doxygen-src
