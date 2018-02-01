@@ -55,6 +55,9 @@ doxygen $DOXYFILE 2>&1 | tee doxygen.log
 echo 'Done generating Doxygen code documentation...'
 #cat doxygen.log
 
+cd doc/doxygen
+du -h
+
 ## Copy Doxygen files to dash-docs folder
 #echo 'Copy Doxygen files to _site...'
 #cp -R doc/doxygen $TRAVIS_BUILD_DIR/_site/en/
