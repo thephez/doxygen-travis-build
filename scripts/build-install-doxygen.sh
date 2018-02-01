@@ -22,6 +22,8 @@ make
 echo "Done building doxygen..."
 ./bin/doxygen -v
 
+echo "doxygen path: " $(pwd)
+
 echo "Install Doxygen"
 cp ./bin/* $TRAVIS_BUILD_DIR
 #make install
