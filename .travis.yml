@@ -30,7 +30,7 @@ deploy:
     branch: master
 
   verbose: true
-  local-dir: $TRAVIS_BUILD_DIR/dash/doc/doxygen/html/
+  local-dir: dash/doc/doxygen/html/
   repo: thephez/doxygen-travis-build
   target_branch: gh-pages
 
