@@ -48,16 +48,15 @@ cd dash
 
 # Copy Doxygen config / build files
 cp $TRAVIS_BUILD_DIR/doxygen/* doc/
-du -h doc/
+echo $(ls doc/)
 
 ################################################################################
 ##### Generate the Doxygen code documentation and log the output.          #####
 echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
-echo .$TRAVIS_BUILD_DIR/doxygen
 echo "doxyfile: " doc/$DOXYFILE
 #.$TRAVIS_BUILD_DIR/doxygen doc/$DOXYFILE 2>&1 | tee doxygen.log
-.$TRAVIS_BUILD_DIR/doxygen-src/build/bin/doxygen doc/$DOXYFILE 2>&1 | tee doxygen.log
+/home/travis/doxygen-src/build/bin/doxygen doc/$DOXYFILE 2>&1 | tee doxygen.log
 
 echo 'Done generating Doxygen code documentation...'
 #cat doxygen.log
