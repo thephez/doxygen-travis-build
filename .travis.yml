@@ -7,7 +7,7 @@ sudo: false
 env:
   # http://docs.travis-ci.com/user/environment-variables/#Global-Variables
   global:
-    - DOXYFILE: $TRAVIS_BUILD_DIR/doxygen/Doxyfile-dashdocs
+    - DOXYFILE: Doxyfile-dashdocs
 
 # Install dependencies
 addons:
