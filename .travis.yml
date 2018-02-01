@@ -13,11 +13,14 @@ env:
 addons:
   apt:
     packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
+      - flex
+      - bison
+      - build-essential
       - graphviz
+      #- doxygen
+      #- doxygen-doc
+      #- doxygen-latex
+      #- doxygen-gui
 
 script: python main.py
 
@@ -37,5 +40,7 @@ deploy:
 # Generate and deploy documentation
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - chmod +x scripts/generateDocumentationAndDeploy.sh
-  - ./scripts/generateDocumentationAndDeploy.sh
+  - chmod +x scripts/build-install-doxygen.sh
+  - ./scripts/build-install-doxygen.sh
+  #- chmod +x scripts/generateDocumentationAndDeploy.sh
+  #- ./scripts/generateDocumentationAndDeploy.sh
