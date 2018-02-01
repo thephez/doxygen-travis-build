@@ -1,0 +1,28 @@
+language: python
+
+python:
+  - "2.7"
+
+sudo: false
+env:
+  # http://docs.travis-ci.com/user/environment-variables/#Global-Variables
+  global:
+    - DOXYFILE: $TRAVIS_BUILD_DIR/doxygen/Doxyfile-dashdocs
+
+# Install dependencies
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+
+script: python main.py
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  #- chmod +x scripts/generateDocumentationAndDeploy.sh
+  #- ./scripts/generateDocumentationAndDeploy.sh
