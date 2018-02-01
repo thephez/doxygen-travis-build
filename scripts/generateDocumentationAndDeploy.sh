@@ -39,12 +39,16 @@ echo 'Setting up the script...'
 # Exit with nonzero exit code if anything fails
 set -e
 
+cd ~/
+ls
+
 # Clone Dash Core
 git clone https://github.com/dashpay/dash.git
 cd dash
 
 # Copy Doxygen config / build files
 cp $TRAVIS_BUILD_DIR/doxygen/* doc/
+du -h doc/
 
 ################################################################################
 ##### Generate the Doxygen code documentation and log the output.          #####
