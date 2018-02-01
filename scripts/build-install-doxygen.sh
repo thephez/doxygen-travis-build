@@ -5,7 +5,6 @@ set -ex
 echo "Cloning doxygen repository..."
 cd ~/
 git clone https://github.com/doxygen/doxygen.git
-du -h
 
 cd doxygen
 
@@ -17,8 +16,10 @@ echo "Make..."
 cmake -G "Unix Makefiles" ..
 make
 
-echo "Done building doxying..."
-du -h
+echo "Done building doxygen..."
+./bin/doxygen
+
+make install
 
 #echo "Install Doxygen"
 #sudo make install
