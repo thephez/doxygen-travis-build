@@ -19,7 +19,7 @@ make
 echo "Done building doxygen..."
 ./bin/doxygen
 
+echo "Install Doxygen"
 make install
 
-#echo "Install Doxygen"
-#sudo make install
+cd $TRAVIS_BUILD_DIR
