@@ -27,7 +27,7 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: false
   on:
-    branch: travisGHdeploy
+    branch: master
 
   verbose: true
   local-dir: $TRAVIS_BUILD_DIR/dash/doc/doxygen/html/
